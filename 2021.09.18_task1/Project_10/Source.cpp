@@ -10,3 +10,4 @@ int main()
 	cout << (a * (a_more_than_b)+b * (b_more_than_a)) / (a_more_than_b + b_more_than_a) << endl;
 	return EXIT_SUCCESS;
 }
+
