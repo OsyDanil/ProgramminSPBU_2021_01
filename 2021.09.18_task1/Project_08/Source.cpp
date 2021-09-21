@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int h1 = 0;
-	int	m1 = 0;
+	int m1 = 0;
 	int	s1 = 0;
 	int	h2 = 0;
 	int	m2 = 0;
