@@ -10,7 +10,7 @@ int main()
 	t = a;
 	a = b;
 	b = t;
-	cout << a <<" "<< b <<endl;
+	cout << a << " " << b <<endl;
 
 	return EXIT_SUCCESS;
 }
