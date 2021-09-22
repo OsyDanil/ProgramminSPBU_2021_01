@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-	int a;
+	int a = 0;
 	cin >> a;
-	cout << (a / 100) + (a/10)%10 + a % 10 << endl;
+	cout << (a / 100) + (a/10)%10 + a % 10 <<endl;
 
 	return EXIT_SUCCESS;
 }

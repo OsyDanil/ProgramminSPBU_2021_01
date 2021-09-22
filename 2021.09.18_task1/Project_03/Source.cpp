@@ -7,7 +7,7 @@ int main()
 	int k = 0;
 	cin >> n;
 	cin >> k;
-	cout << k%n << endl;
+	cout << k%n <<endl;
 
 
 	return EXIT_SUCCESS;
