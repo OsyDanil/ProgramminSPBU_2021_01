@@ -13,8 +13,8 @@ int main(int argc, char* argv[])
 	int sec_max = 0;
 	bool negative_is = false;
 	cin >> n;
-	int* m = new int[n] {0};
-
+	int m[100] = { 0 };
+	
 	for (int i = 0; i < n; ++i)
 	{
 		cin >> m[i];
@@ -92,6 +92,5 @@ int main(int argc, char* argv[])
 		cout << m[i] << " ";
 	}
 
-	delete[] m;
 	return EXIT_SUCCESS;
 }
