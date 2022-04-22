@@ -261,10 +261,15 @@ void ArrayList::extractbegin()
 					if (this->data[i] > max)
 					{
 						max = this->data[i];
+						this->k_max = 1;
+					}
+					else if (this->data[i] == max)
+					{
+						++this->k_max;
 					}
 				}
 				this->maximum = max;
-				this->k_max = 1;
+				
 			}
 		}
 		if (b == this->minimum)
@@ -281,10 +286,15 @@ void ArrayList::extractbegin()
 					if (this->data[i] < min)
 					{
 						min = this->data[i];
+						this->k_min = 1;
+					}
+					else if (this->data[i] == min)
+					{
+						++this->k_min;
 					}
 				}
 				this->minimum = min;
-				this->k_min = 1;
+				
 			}
 		}
 
@@ -300,8 +310,8 @@ int ArrayList::extractend()
 {
 
 	this->count--;
-
-	if (this->data[this->count] == this->maximum)
+	int b = this->data[this->count];
+	if (b == this->maximum)
 	{
 		if (k_max > 1)
 		{
@@ -315,13 +325,18 @@ int ArrayList::extractend()
 				if (this->data[i] > max)
 				{
 					max = this->data[i];
+					this->k_max = 1;
+				}
+				else if (this->data[i] == max)
+				{
+					++this->k_max;
 				}
 			}
 			this->maximum = max;
-			this->k_max = 1;
+
 		}
 	}
-	if (this->data[this->count] == this->minimum)
+	if (b == this->minimum)
 	{
 		if (k_min > 1)
 		{
@@ -335,10 +350,15 @@ int ArrayList::extractend()
 				if (this->data[i] < min)
 				{
 					min = this->data[i];
+					this->k_min = 1;
+				}
+				else if (this->data[i] == min)
+				{
+					++this->k_min;
 				}
 			}
 			this->minimum = min;
-			this->k_min = 1;
+
 		}
 	}
 
@@ -381,7 +401,7 @@ void ArrayList::extract(int position)
 			this->data = newdata;
 			this->count--;
 
-			if (element == this->maximum)
+			if (b == this->maximum)
 			{
 				if (k_max > 1)
 				{
@@ -395,32 +415,18 @@ void ArrayList::extract(int position)
 						if (this->data[i] > max)
 						{
 							max = this->data[i];
+							this->k_max = 1;
+						}
+						else if (this->data[i] == max)
+						{
+							++this->k_max;
 						}
 					}
 					this->maximum = max;
-					this->k_max = 1;
+
 				}
 			}
-			if (element == this->minimum)
-			{
-				if (k_min > 1)
-				{
-					--k_min;
-				}
-				else
-				{
-					int min = this->maximum;
-					for (int i = 0; i < this->count; ++i)
-					{
-						if (this->data[i] < min)
-						{
-							min = this->data[i];
-						}
-					}
-					this->minimum = min;
-					this->k_min = 1;
-				}
-			}
+			if (b == this->minimum)
 			cout << b;
 		}
 	}

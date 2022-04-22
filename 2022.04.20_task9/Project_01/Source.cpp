@@ -9,13 +9,13 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	ArrayList list(1);
 
-	for (int i = 0; i < 30; ++i)
+	for (int i = 0; i < 40; ++i)
 	{
 		int x = rand() % 100;
 
 		cout << "номер итерации " << i << endl;
 
-		if (i % 4 == 0)
+		if (i % 3 == 0)
 		{
 
 			list.pushend(x);
@@ -23,7 +23,7 @@ int main()
 			cout << "теперь лист выглядит так:" << endl;
 			cout << list << endl;
 		}
-		else if (i % 4 == 1)
+		else if (i % 3 == 1)
 		{
 
 			list.pushbegin(x);
@@ -31,7 +31,7 @@ int main()
 			cout << "теперь лист выглядит так:" << endl;
 			cout << list << endl;
 		}
-		else if (i % 4 == 2)
+		else if (i % 3 == 2)
 		{
 
 			int p = rand() % 100;
@@ -40,7 +40,7 @@ int main()
 			cout << "теперь лист выглядит так:" << endl;
 			cout << list << endl;
 		}
-		else if (i % 4 == 3)
+		if (i % 2 == 1)
 		{
 			int f = rand();
 
