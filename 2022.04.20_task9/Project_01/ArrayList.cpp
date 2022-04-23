@@ -269,7 +269,7 @@ void ArrayList::extractbegin()
 					}
 				}
 				this->maximum = max;
-				
+
 			}
 		}
 		if (b == this->minimum)
@@ -294,7 +294,7 @@ void ArrayList::extractbegin()
 					}
 				}
 				this->minimum = min;
-				
+
 			}
 		}
 
@@ -427,7 +427,7 @@ void ArrayList::extract(int position)
 				}
 			}
 			if (b == this->minimum)
-			cout << b;
+				cout << b;
 		}
 	}
 	else
@@ -467,6 +467,47 @@ void ArrayList::sort()
 	delete[] this->data;
 	delete[] newdata;
 	this->data = sorted_mas;
+}
+
+void ArrayList::quick_sort(int start, int end)
+{
+	if (end == -1)
+	{
+		end = this->count - 1;
+	}
+
+	int left = start;
+	int right = end;
+	int pivot = this->data[(left + right) / 2];
+
+	while (left <= right)
+	{
+
+		while (this->data[left] < pivot)
+		{
+			++left;
+		}
+		while (this->data[right] > pivot)
+		{
+			--right;
+		}
+		if (left <= right)
+		{
+			swap(left, right);
+			++left;
+			--right;
+		}
+
+	}
+	
+	if (right > start)
+	{
+		quick_sort(start, right);
+	}
+	if (left < end)
+	{
+		quick_sort(left, end);
+	}
 }
 
 int& ArrayList::operator[](int pos)

@@ -33,6 +33,9 @@ public:
 	void extract(int position);
 
 	void sort();
+    void quick_sort(int start = 0, int  = -1 );
+
+	
 
 	int& operator[](int pos);
 
