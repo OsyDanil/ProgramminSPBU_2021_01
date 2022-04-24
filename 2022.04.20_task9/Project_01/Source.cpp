@@ -9,7 +9,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	ArrayList list(1);
 
-	/*for (int i = 0; i < 40; ++i)
+	for (int i = 0; i < 40; ++i)
 	{
 		int x = rand() % 100;
 
@@ -72,17 +72,13 @@ int main()
 		}
 
 	}
-	*/
-	//list.sort();
-	//cout << endl << "После сортировки: " << endl;
-	for (int i = 0; i < 50; ++i)
-	{
-		list.pushend(rand() % 10);
-	}
+
+
 	cout << list << endl;
 	list.quick_sort();
-	cout << list << endl;
-	//cout << endl << "После сортировки квик сортом: " << endl;
-	//cout << list;
+
+	cout << endl << "После сортировки квик сортом: " << endl;
+	cout << list;
+
 	return EXIT_SUCCESS;
 }
